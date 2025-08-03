@@ -14,7 +14,7 @@ export async function GET(
     return NextResponse.json({ success: true, todo });
   } catch {
     return NextResponse.json(
-      { message: "zehmet olmasa duzgun todo secim" },
+      { message: "zehmet olmasa duzgun todo secin" },
       { status: 404 }
     );
   }
