@@ -1,6 +1,12 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const Home = () => {
+  const [checked, setchecked] = useState(false);
+  const ClickChacked = (event: any) => {
+    const value = event.target.value;
+    setchecked(value);
+  };
   return (
     <>
       <div className="bg-gray-300 w-180 h-90">
@@ -20,6 +26,10 @@ const Home = () => {
             />
           </div>
         </form>
+        <div className="">
+          <h1>title</h1>
+          <input type="checkbox" checked={checked} onChange={ClickChacked} />
+        </div>
       </div>
     </>
   );
