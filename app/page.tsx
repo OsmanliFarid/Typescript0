@@ -6,7 +6,6 @@ const Home = () => {
   const ClickChacked = (event: any) => {
     const value = event.target.value;
     setchecked(value);
-    console.log(checked);
   };
   return (
     <>
