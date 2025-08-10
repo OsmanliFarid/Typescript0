@@ -2,10 +2,9 @@
 import React, { useState } from "react";
 
 const Home = () => {
-  const [checked, setchecked] = useState(false);
+  const [checked, setchecked] = useState(true);
   const ClickChacked = (event: any) => {
-    const value = event.target.value;
-    setchecked(value);
+    setchecked(!checked);
   };
   return (
     <>
