@@ -25,7 +25,7 @@ const Home = () => {
             />
           </div>
         </form>
-        <div className="">
+        <div className="bg-white max-w-[60vw] mx-auto mt-10 rounded-2xl h-[50px] flex items-center px-2">
           <h1>title</h1>
           <input type="checkbox" checked={checked} onChange={ClickChacked} />
         </div>
