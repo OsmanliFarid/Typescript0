@@ -11,7 +11,11 @@ export async function GET(
   await ConnectDb();
   try {
     const todo = await TodoModel.findById(id);
-    return NextResponse.json({ success: true, todo });
+    if (!todo) {
+      return NextResponse.json({ success: false, message: "todo tapilmadi" });
+    } else {
+      return NextResponse.json({ success: true, todo });
+    }
   } catch {
     return NextResponse.json(
       { message: "zehmet olmasa duzgun todo secin" },
@@ -19,3 +23,20 @@ export async function GET(
     );
   }
 }
+
+export const DELETE = async (
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) => {
+  const id = params.id;
+  await ConnectDb();
+  try {
+    const todo = await TodoModel.findByIdAndDelete(id);
+    return NextResponse.json({ success: true, message: "todo silindi", todo });
+  } catch {
+    return NextResponse.json(
+      { message: "Zehmet olmasa duzgun todo secin" },
+      { status: 404 }
+    );
+  }
+};
