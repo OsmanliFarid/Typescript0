@@ -18,7 +18,7 @@ export async function GET(
     }
   } catch {
     return NextResponse.json(
-      { message: "zehmet olmasa duzgun todo sec" },
+      { message: "zehmet olmasa duzgun todo secin" },
       { status: 404 }
     );
   }
