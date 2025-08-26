@@ -14,7 +14,7 @@ const Home = () => {
             <div className="flex justify-center">
               <input
                 type="text"
-                placeholder="todo yazin lutfen"
+                placeholder="todo yazin"
                 className="bg-white w-90  h-[40px] px-3 text-black outline-none border-2 border-orange-400 rounded-2xl"
               />
             </div>
