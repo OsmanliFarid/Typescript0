@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(createdTodo, { status: 201 });
     } else {
       return NextResponse.json(
-        { message: "zehmet olmasa xanalari duzgun doldurun." },
+        { message: "zehmet olmasa xanalari duzgun doldurun" },
         { status: 404 }
       );
     }
