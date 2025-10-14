@@ -35,7 +35,7 @@ export const DELETE = async (
     return NextResponse.json({ success: true, message: "todo silindi", todo });
   } catch {
     return NextResponse.json(
-      { message: "Zehmet olmasa duzgun todo secin.a" },
+      { message: "Zehmet olmasa duzgun todo secin." },
       { status: 404 }
     );
   }
